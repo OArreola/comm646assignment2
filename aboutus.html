@@ -16,6 +16,9 @@
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
 
+    <!-- Back to Top CSS -->
+    <link href="css/floating-totop-button.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/styles.css" />
 
     <!--[if lt IE 9]>
@@ -25,6 +28,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+    <!-- Back to Top JS -->
+    <script src="js/floating-totop-button.min.js"></script>
+
+    <!-- Cycle2 JS -->
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
     <script src="js/jquery.mobilemenu.js"></script>
     <script>
       $(document).ready(function () {
@@ -32,6 +40,7 @@
         //jQuery
         $(function () {
           $(document).tooltip();
+          $("body").toTopButton({ imagePath: "./images/icons" });
           $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
           $("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
         });
@@ -117,7 +126,18 @@
           success, including more than doubling their customer base from 20,000
           to 70,000 within 15 months of launching a Vecta Corp. solution.
         </p>
+      </section>
 
+      <section id="testimonials" class="five columns">
+        <h4>Careers</h4>
+        <p>
+          We are always looking for educated and motivated people to join our
+          team. Do you have what it takes to build best-of-breed vSolutions?
+          Submit your resume.
+        </p>
+      </section>
+
+      <section class="sixteen columns">
         <h4>Management Team</h4>
 
         <div id="tabs">
@@ -198,16 +218,26 @@
         </div>
 
         <h4>Our New Headquarters</h4>
+        <div
+          class="cycle-slideshow"
+          data-cycle-fx="scrollHorz"
+          data-cycle-timeout="0"
+          style="margin: auto;"
+        >
+          <!-- prev/next links -->
+          <div class="cycle-prev"></div>
+          <div class="cycle-next"></div>
+          <img class="cycle2Img" src="images/building_01.jpg" />
+          <img class="cycle2Img" src="images/building_02.jpg" />
+          <img class="cycle2Img" src="images/building_03.jpg" />
+          <img class="cycle2Img" src="images/building_04.jpg" />
+          <img class="cycle2Img" src="images/building_05.jpg" />
+        </div>
       </section>
 
-      <section id="testimonials" class="five columns">
-        <h4>Careers</h4>
-        <p>
-          We are always looking for educated and motivated people to join our
-          team. Do you have what it takes to build best-of-breed vSolutions?
-          Submit your resume.
-        </p>
-      </section>
+      <footer>
+        <h3>Copyright &copy; 2020 Vecta Corporation - All Rights Reserved</h3>
+      </footer>
     </main>
   </body>
 </html>

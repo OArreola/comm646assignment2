@@ -31,10 +31,11 @@
     <!-- Back to Top JS -->
     <script src="js/floating-totop-button.min.js"></script>
 
+    <!-- Sticky JS -->
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
     <script src="js/jquery.mobilemenu.js"></script>
 
-    <!-- Back to Top JS -->
-    <!-- <script src="js/floating-totop-button.js"></script> -->
     <script>
       $(document).ready(function () {
         $("#responsive-menu").mobileMenu();
@@ -42,32 +43,9 @@
         $(function () {
           $(document).tooltip();
           $("body").toTopButton({ imagePath: "./images/icons" });
+          $("#sticker").sticky({ topSpacing: 10 });
+          $(".widget a").button();
         });
-
-        /*$(".stickyNav").stickyNavbar();*/
-        /*
-        $(".stickyNav").stickyNavbar({
-          activeClass: "active", // Class to be added to highlight nav elements
-          sectionSelector: "scrollto", // Class of the section that is interconnected with nav links
-          animDuration: 250, // Duration of jQuery animation
-          startAt: 0, // Stick the menu at XXXpx from the top of the this() (nav container)
-          easing: "linear", // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
-          animateCSS: true, // AnimateCSS effect on/off
-          animateCSSRepeat: false, // Repeat animation everytime user scrolls
-          cssAnimation: "fadeInDown", // AnimateCSS class that will be added to selector
-          jqueryEffects: false, // jQuery animation on/off
-          jqueryAnim: "slideDown", // jQuery animation type: fadeIn, show or slideDown
-          selector: "a", // Selector to which activeClass will be added, either "a" or "li"
-          mobile: false, // If false nav will not stick under 480px width of window
-          mobileWidth: 480, // The viewport width (without scrollbar) under which stickyNavbar will not be applied (due usability on mobile devices)
-          zindex: 9999, // The zindex value to apply to the element: default 9999, other option is "auto"
-          stickyModeClass: "sticky", // Class that will be applied to 'this' in sticky mode
-          unstickyModeClass: "unsticky", // Class that will be applied to 'this' in non-sticky mode
-        });
-        */
-        // $(function () {
-        //   $("body").toTopButton({ imagePath: "./images/icons" });
-        // });
       });
     </script>
   </head>
@@ -235,24 +213,15 @@
 
       <section id="testimonials" class="five columns">
         <h4>Quick Nav</h4>
-        <!-- 
-        <div id="stickyNav" class="stickyNav">
-          <nav id="nav">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="#divVProspect">vProspect 2.0</a>
-              </li>
-              <li>
-                <a href="#divVConvert">vConvert 2.0</a>
-              </li>
-              <li>
-                <a href="#divVRetain">vRetain 1.0</a>
-              </li>
-            </ul>
-          </nav>
+        <div id="sticker" class="widget">
+          <a href="#divVProspect">vProspect 2.0</a><br />
+          <a href="#divVConvert">vConvert 2.0</a><br />
+          <a href="#divVRetain">vRetain 1.0</a>
         </div>
-       -->
       </section>
+      <footer>
+        <h3>Copyright &copy; 2020 Vecta Corporation - All Rights Reserved</h3>
+      </footer>
     </main>
   </body>
 </html>
